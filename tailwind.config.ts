@@ -30,7 +30,8 @@ const config: Config = {
       normal: "400",
     },
     transitionDuration: {
-      "1000": "200ms",
+      "200": "200ms",
+      "500": "500ms",
     },
     transitionTimingFunction: {
       "custom-ease": "cubic-bezier(.51,-0.01,.42,1)",

@@ -1,15 +1,36 @@
 .button {
-  @apply text-white font-light w-[15rem] relative h-14;
+  @apply text-white font-light bg-primary rounded-full px-[3rem] h-14 flex items-center transition-all duration-500 ease-custom-ease;
 
-  .content {
-    @apply w-full bg-primary rounded-full h-full flex items-center pl-10 transition-all duration-1000 ease-custom-ease;
+  .icon {
+    @apply w-6 transition-all duration-500 ease-custom-ease -ml-6 opacity-0;
+  }
+  &.extern {
+    .icon {
+      @apply -rotate-45 mt-6;
+    }
+  }
+  &.bottom {
+    .icon {
+      @apply rotate-45 -mt-6;
+    }
+  }
+}
+
+.button:hover {
+  @apply pr-[2.5rem];
+
+  .icon {
+    @apply ml-3 opacity-100;
   }
 
-  .iconWrapper {
-    @apply bg-primary absolute top-0 right-0 w-16 h-14 flex items-center justify-center rounded-full transition-all duration-1000 ease-custom-ease;
-
+  &.extern {
     .icon {
-      @apply w-6;
+      @apply opacity-100 mt-0;
+    }
+  }
+  &.bottom {
+    .icon {
+      @apply opacity-100 mt-0;
     }
   }
 }
